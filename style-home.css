@@ -1,0 +1,38 @@
+body{
+    color: white;
+    background-image: url("./media/images/restaurent_logo.jpg");
+    background-size: /*cover ; */ 1550px 710px ;	/*Ensure the image covers the entire background | width  height */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Make the background fixed (pinned) */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    
+    }
+
+    /* Add alpha transparency by using a semi-transparent overlay */
+    body::before {	/*pseudo-element creates a transparent layer that applies over the background image but behind any content. */
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Adjust the RGB values and alpha for transparency */
+    z-index: -1; /* Keep it behind the content */
+    }
+
+    aside {
+        display: block;     /* to display the option line by line */
+        position: fixed;   /* pins the <aside> relative to the viewport, so it doesn't move during scrolling.  */
+        right: 0;           /* Pin to the left */
+        float: right;       /* Align the aside to the left (optional) */
+        padding: 10px;
+        margin-right: 40px;
+      }
+      
+    img{
+        border-radius: 30px;
+    }
+
+    #logo {
+        border-radius: 0%;
+    }
